@@ -1,0 +1,35 @@
+"use client";
+
+import { useEffect, useState } from "react";
+
+export default function Recommendations({ title }: { title: string }) {
+  const [movies, setMovies] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (!title) return;
+
+    fetch(`/api/recommend?title=${encodeURIComponent(title)}`)
+      .then((res) => res.json())
+      .then((data) => setMovies(data));
+  }, [title]);
+
+  return (
+    <div className="mt-8">
+      <h2 className="text-2xl text-red-500 mb-3">
+        Recommendations
+      </h2>
+
+      <div className="flex gap-4 overflow-x-scroll">
+        {movies.map((m, i) => (
+          <div key={i} className="min-w-[150px]">
+            <img
+              src={m.poster}
+              className="w-[150px] h-[220px] object-cover rounded"
+            />
+            <p className="text-sm mt-1">{m.title}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}

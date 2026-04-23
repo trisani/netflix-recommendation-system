@@ -1,0 +1,21 @@
+{
+  "Stranger Things": ["Dark", "Squid Game", "The Witcher"],
+  "Dark": ["Stranger Things", "Squid Game", "The Witcher"],
+  "Squid Game": ["Stranger Things", "Dark", "Money Heist"],
+
+  "Inception": ["Interstellar", "Extraction", "Parasite"],
+  "Interstellar": ["Inception", "Extraction", "Parasite"],
+  "Extraction": ["Interstellar", "Inception"],
+
+  "Money Heist": ["Narcos", "Breaking Bad", "Squid Game"],
+  "Narcos": ["Money Heist", "Breaking Bad", "Sacred Games"],
+  "Breaking Bad": ["Narcos", "Money Heist", "Sacred Games"],
+
+  "Sacred Games": ["Narcos", "Breaking Bad"],
+  "Lupin": ["Money Heist", "Narcos"],
+  "Kingdom": ["Squid Game", "Dark"],
+
+  "Parasite": ["Inception", "Interstellar"],
+  "RRR": ["Extraction", "Parasite"],
+  "The Witcher": ["Stranger Things", "Dark"]
+}
